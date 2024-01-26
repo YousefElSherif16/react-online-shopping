@@ -1,0 +1,47 @@
+.navigation-bar {
+  height: 60px;
+  background-color: #ffab00a3;
+}
+
+.navigation-bar-logo h2 {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #000;
+}
+
+.navigation-bar-menu ul li a {
+  display: flex;
+  align-items: center;
+  color: #141718;
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.navigation-bar-icons ul svg {
+  cursor: pointer;
+}
+.navigation-bar-icons ul svg:hover {
+  opacity: 0.5;
+}
+.icon-text {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 10px;
+  color: #ffab00;
+}
+
+@media (max-width: 768px) {
+  .navigation-bar-logo h2 {
+    font-size: 16px;
+  }
+  .navigation-bar-icons ul li:nth-child(1) {
+    display: none;
+  }
+  .navigation-bar-icons ul li:nth-child(2) {
+    display: none;
+  }
+}

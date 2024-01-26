@@ -1,0 +1,40 @@
+.notification-bar {
+  height: 40px;
+  background-color: #141718;
+}
+
+.notification-bar-text {
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.notification-bar-button {
+  border-bottom: 1px solid #ffab00;
+}
+.notification-bar-button a {
+  color: #ffab00;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+}
+.notification-bar-close:hover {
+  opacity: 0.5;
+}
+@media (max-width: 768px) {
+  .notification-bar-text {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .notification-bar-text svg {
+    width: 16px;
+    height: 16px;
+  }
+  .notification-bar-close path {
+    fill: #fff;
+  }
+}

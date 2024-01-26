@@ -1,0 +1,29 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../font/Poppins-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: SpaceGrotesk;
+  src: url(../font/SpaceGrotesk-Regular.ttf) format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}

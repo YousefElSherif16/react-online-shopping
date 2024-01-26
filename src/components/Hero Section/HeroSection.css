@@ -1,0 +1,58 @@
+.hero-section-content {
+  background-color: #ffab00a3;
+}
+
+.hero-section-content-image {
+  background: url(../../assets/img/hero-image.png) no-repeat;
+  background-size: cover;
+  height: 820px;
+}
+
+.hero-section-content-text h1 {
+  font-family: Poppins;
+  font-size: 80px;
+  line-height: 84px;
+  letter-spacing: -3px;
+  color: #121212;
+}
+.hero-section-content-text #amazing {
+  color: #377dff;
+}
+.hero-section-content-text p {
+  margin-bottom: 28px;
+  font-family: Inter;
+  font-size: 20px;
+  line-height: 32px;
+  color: #121212;
+}
+.hero-section-content-text a {
+  padding: 12px 56px;
+  background-color: #141718;
+  border-radius: 8px;
+  color: #fff;
+  font-family: Inter;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: -0.4px;
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .hero-section-content-text h1 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -0.4px;
+  }
+  .hero-section-content-text p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 16px;
+  }
+  .hero-section-content-text a {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .hero-section-content-image {
+    height: 380px;
+  }
+}
