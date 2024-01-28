@@ -1,0 +1,102 @@
+.banner-content {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 171, 0, 0.4) 0%,
+      rgba(255, 171, 0, 0.4) 100%
+    ),
+    #fff;
+}
+
+.sale {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #377dff;
+}
+.title {
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+.phrase {
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #121212;
+}
+.offer {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #141718;
+}
+.timer-card-item {
+  display: flex;
+  flex-direction: column;
+}
+.timer-card-item-number {
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.6px;
+  color: #141718;
+  padding: 11px 9px;
+  background-color: #fefefe;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  display: flex;
+}
+
+.timer-card-item-text {
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #141718;
+  display: flex;
+  justify-content: center;
+}
+.banner-button {
+  background-color: #141718;
+  border-radius: 8px;
+  width: 154px;
+}
+.banner-button a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 34px;
+    line-height: 38px;
+    letter-spacing: -0.6px;
+  }
+  .phrase {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .banner-button {
+    width: 147px;
+  }
+  .banner-button a {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  img {
+    height: 367px;
+  }
+}

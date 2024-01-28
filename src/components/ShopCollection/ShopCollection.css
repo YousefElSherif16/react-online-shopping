@@ -1,0 +1,92 @@
+.shop-collection-text {
+  font-family: Poppins;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: -0.4px;
+  color: #000;
+}
+
+.shop-collection-left-overlay p,
+.shop-collection-right-overlay p {
+  font-family: Poppins;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38px;
+  letter-spacing: -0.6px;
+  color: #121212;
+}
+.shop-collection-left-overlay a,
+.shop-collection-right-overlay a {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  color: #121212;
+  text-decoration: none;
+  border-bottom: 1px solid #121212;
+}
+
+.left-image {
+  height: 664px;
+}
+.right-image {
+  height: 319px;
+}
+.shop-collection-left-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 538px;
+  left: 48px;
+  gap: 12px;
+}
+.shop-collection-right-overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 201px;
+  left: 32px;
+  gap: 12px;
+}
+@media (max-width: 576px) {
+  .shop-collection-text {
+    font-size: 34px;
+    line-height: 38px;
+    letter-spacing: -0.6px;
+  }
+  .left-image {
+    height: 377px;
+  }
+  .right-image {
+    height: 180px;
+  }
+  .shop-collection-left-overlay p,
+  .shop-collection-right-overlay p {
+    font-size: 28px;
+    line-height: 34px;
+    color: #141718;
+  }
+  .shop-collection-left-overlay a,
+  .shop-collection-right-overlay a {
+    font-size: 14px;
+    line-height: 24px;
+    color: #141718;
+  }
+  .shop-collection-left-overlay svg,
+  .shop-collection-right-overlay svg {
+    width: 16px;
+    height: 16px;
+  }
+  .shop-collection-left-overlay {
+    top: 279px;
+    left: 32px;
+    gap: 8px;
+  }
+  .shop-collection-right-overlay {
+    top: 82px;
+    left: 32px;
+    gap: 8px;
+  }
+}
