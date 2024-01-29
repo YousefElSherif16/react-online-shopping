@@ -49,6 +49,10 @@
   object-position: left;
 }
 
+.best-seller-content-slider-item button {
+  display: none;
+}
+
 @media (max-width: 576px) {
   .best-seller-content-slider-item-desc {
     width: 132px;

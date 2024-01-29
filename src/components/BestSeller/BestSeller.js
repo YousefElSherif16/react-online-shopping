@@ -1,5 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Container, Row } from "reactstrap";
+import Button from "../../UI/Button";
 import BestSellerItem from "./BestSellerItem";
 import EditProduct from "./EditProduct";
 
@@ -60,15 +62,33 @@ const BestSeller = () => {
       });
   };
 
+  const handleCreate = () => {
+    axios
+      .post(baseURL, {
+        title: "Hello World!",
+        body: "This is a new post.",
+      })
+      .then((response) => {
+        setPost(response.data);
+      });
+  };
+
   if (!products.length) return null;
   return (
     <div>
       <section id="best-seller">
         <div className="container">
-          <div className="best-seller">
-            <div className="best-seller-content-text">
-              <p>Best Seller</p>
-            </div>
+          <div className="best-seller ">
+            <Row className="py-5">
+              <div className="col-8 best-seller-content-text justify-content-start">
+                <p>Best Seller</p>
+              </div>
+              <div className="col-4 d-flex justify-content-end ">
+                <Button className="btn btn-primary" onclick={handleCreate}>
+                  Add Product
+                </Button>
+              </div>
+            </Row>
             <div className="best-seller-content">
               <div className="best-seller-content-slider">
                 {products.map((item) => (
@@ -89,6 +109,7 @@ const BestSeller = () => {
           product={product}
           title={"Edit Product"}
           onConfirm={handleSave}
+          onCancel={() => setEditable(false)}
         />
       )}
     </div>

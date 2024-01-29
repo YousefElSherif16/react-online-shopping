@@ -1,12 +1,8 @@
 .best-seller {
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 48px 0 100px 0;
-  gap: 48px;
   margin: 0 auto;
 }
 .best-seller-content {
@@ -14,10 +10,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
-}
-.best-seller-content-text {
-  display: flex;
   width: 100%;
 }
 .best-seller-content-text p {
