@@ -1,7 +1,18 @@
 import { Container, Row } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 import "./NavigationBar.css";
 
 const NavigationBar = () => {
+  const navigate = useNavigate();
+
+  const handleDashboardNavigate = () => {
+    navigate("/dashboard");
+  };
+
+  const handleHomeNavigate = () => {
+    navigate("/");
+  };
+
   return (
     <Container fluid>
       <Row className="navigation-bar d-flex justify-content-between align-items-center">
@@ -21,12 +32,14 @@ const NavigationBar = () => {
               strokeLinecap="round"
             />
           </svg>
-          <h2>3legant.</h2>
+          <h2 onClick={handleHomeNavigate}>3legant.</h2>
         </div>
         <div className="col-sm-6 col-0 d-md-flex d-none justify-content-center navigation-bar-menu">
           <ul className="d-flex justify-content-center align-items-center gap-4">
             <li>
-              <a href="#">Home</a>
+              <a href="#" onClick={handleHomeNavigate}>
+                Home
+              </a>
             </li>
             <li>
               <a href="#" className="gap-0.5">
@@ -69,7 +82,9 @@ const NavigationBar = () => {
               </a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="#" onClick={handleDashboardNavigate}>
+                Contact Us
+              </a>
             </li>
           </ul>
         </div>

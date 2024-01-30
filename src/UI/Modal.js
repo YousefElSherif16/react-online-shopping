@@ -9,9 +9,9 @@ const Backdrop = (props) => {
 };
 
 const ModalOverlay = (props) => {
-  const [name, setName] = useState(props.product.name);
-  const [price, setPrice] = useState(props.product.price);
-  const [badge, setBadge] = useState(props.product.badge);
+  const [name, setName] = useState(props.product ? props.product.name : "");
+  const [price, setPrice] = useState(props.product ? props.product.price : "");
+  const [badge, setBadge] = useState(props.product ? props.product.badge : "");
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -54,7 +54,7 @@ const ModalOverlay = (props) => {
           Cancel
         </Button>
         <Button className={classes.editButton} onClick={handleConfirm}>
-          Edit
+          Save
         </Button>
       </footer>
     </Card>

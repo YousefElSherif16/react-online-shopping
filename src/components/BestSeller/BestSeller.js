@@ -7,10 +7,12 @@ import EditProduct from "./EditProduct";
 
 import "./BestSeller.css";
 
-const BestSeller = () => {
+const BestSeller = ({admin}) => {
   const [products, setProducts] = useState([]);
   const [product, setProduct] = useState(null);
+  const [dashboard, setDashboard] = useState(admin);
   const [editable, setEditable] = useState(false);
+  const [creatable, setCreatable] = useState(false);
 
   useEffect(() => {
     axios
@@ -21,13 +23,13 @@ const BestSeller = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, [product, editable]);
+  }, [product, editable, creatable]);
 
   const handleDelete = (id) => {
     axios
       .delete(`https://65b5ce6eda3a3c16abfff78f.mockapi.io/products/${id}`)
       .then((res) => {
-        const newProducts = post.filter((item) => item.id !== id);
+        const newProducts = products.filter((item) => item.id !== id);
         setProducts(newProducts);
       })
       .catch((err) => {
@@ -47,7 +49,7 @@ const BestSeller = () => {
       });
   };
 
-  const handleSave = (product) => {
+  const editProduct = (product) => {
     axios
       .put(
         `https://65b5ce6eda3a3c16abfff78f.mockapi.io/products/${product.id}`,
@@ -62,15 +64,38 @@ const BestSeller = () => {
       });
   };
 
-  const handleCreate = () => {
+  const createProduct = (product) => {
+    let newProduct = {
+      ...product,
+      id: Math.random().toString(),
+    };
     axios
-      .post(baseURL, {
-        title: "Hello World!",
-        body: "This is a new post.",
+      .post(`https://65b5ce6eda3a3c16abfff78f.mockapi.io/products`, newProduct)
+      .then((res) => {
+        setProduct(null);
+        setCreatable(false);
       })
-      .then((response) => {
-        setPost(response.data);
+      .catch((err) => {
+        console.log(err);
       });
+  };
+
+  const handleSave = (product) => {
+    if (editable) {
+      editProduct(product);
+    } else if (creatable) {
+      createProduct(product);
+    }
+  };
+
+  const handleCreate = () => {
+    setCreatable(true);
+  };
+
+  const handleCancel = () => {
+    setCreatable(false);
+    setEditable(false);
+    setProduct(null);
   };
 
   if (!products.length) return null;
@@ -83,11 +108,13 @@ const BestSeller = () => {
               <div className="col-8 best-seller-content-text justify-content-start">
                 <p>Best Seller</p>
               </div>
-              <div className="col-4 d-flex justify-content-end ">
-                <Button className="btn btn-primary" onclick={handleCreate}>
-                  Add Product
-                </Button>
-              </div>
+              {dashboard && (
+                <div className="col-4 d-flex justify-content-end ">
+                  <Button className="btn btn-primary" onClick={handleCreate}>
+                    Add Product
+                  </Button>
+                </div>
+              )}
             </Row>
             <div className="best-seller-content">
               <div className="best-seller-content-slider">
@@ -95,6 +122,7 @@ const BestSeller = () => {
                   <BestSellerItem
                     key={item.id}
                     item={item}
+                    dashboard={dashboard}
                     onDelete={() => handleDelete(item.id)}
                     onEdit={() => handleEdit(item.id)}
                   />
@@ -104,12 +132,12 @@ const BestSeller = () => {
           </div>
         </div>
       </section>
-      {editable && (
+      {(editable || creatable) && (
         <EditProduct
           product={product}
-          title={"Edit Product"}
+          title={editable ? "Edit Product" : "Add Product"}
           onConfirm={handleSave}
-          onCancel={() => setEditable(false)}
+          onCancel={handleCancel}
         />
       )}
     </div>

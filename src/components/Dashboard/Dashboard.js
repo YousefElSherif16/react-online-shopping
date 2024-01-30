@@ -4,7 +4,7 @@ import "../BestSeller/BestSellerDashboard.css";
 const Dashboard = () => {
   return (
     <>
-      <BestSeller />
+      <BestSeller admin={true} />
     </>
   );
 };

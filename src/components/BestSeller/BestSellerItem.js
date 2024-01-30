@@ -1,6 +1,6 @@
 import "./BestSellerItem.css";
 
-const BestSellerItem = ({ item, onEdit, onDelete }) => {
+const BestSellerItem = ({ item, dashboard, onEdit, onDelete }) => {
   return (
     <div className="best-seller-content-slider-item me-0">
       <div className="card">
@@ -80,12 +80,16 @@ const BestSellerItem = ({ item, onEdit, onDelete }) => {
         </div>
         <p className="product-name">{item.name}</p>
         <p className="product-price">${item.price}</p>
-        <button className="btn btn-primary" onClick={onEdit}>
-          Edit
-        </button>
-        <button className="btn btn-danger" onClick={onDelete}>
-          Delete
-        </button>
+        {dashboard && (
+          <button className="btn btn-primary" onClick={onEdit}>
+            Edit
+          </button>
+        )}
+        {dashboard && (
+          <button className="btn btn-danger" onClick={onDelete}>
+            Delete
+          </button>
+        )}
       </div>
     </div>
   );

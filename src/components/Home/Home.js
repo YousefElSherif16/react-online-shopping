@@ -12,7 +12,7 @@ const Home = () => {
       <BrandLogos />
       <ProductCarousel />
       <ShopCollection />
-      <BestSeller />
+      <BestSeller admin={false} />
       <Banner />
     </>
   );
