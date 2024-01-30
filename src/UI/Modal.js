@@ -70,13 +70,15 @@ const ModalOverlay = (props) => {
         />
         <label htmlFor="image">Image</label>
         {file && (
-          <div >
+          <div>
             <img
               src={file}
               alt="product"
-              style={{ width: "25%", marginBottom: "1rem", display: "block"}}
+              style={{ width: "25%", marginRight: "1rem" }}
             />
-            <Button className={"btn btn-secondary"}onClick={() => setFile("")}>Remove Image</Button>
+            <Button className={"btn btn-secondary"} onClick={() => setFile("")}>
+              Remove Image
+            </Button>
           </div>
         )}
         {!file && (
