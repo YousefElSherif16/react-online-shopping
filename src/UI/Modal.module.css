@@ -10,7 +10,7 @@
 
 .modal {
   position: fixed;
-  top: 30vh;
+  top: 5vh;
   left: 10%;
   width: 80%;
   z-index: 100;
@@ -18,7 +18,7 @@
 }
 
 .header {
-  background: #4f005f;
+  background-color: black;
   padding: 1rem;
 }
 
@@ -28,7 +28,22 @@
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+
   padding: 1rem;
+}
+.content label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.content input {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  width: 50%;
 }
 
 .actions {
@@ -44,10 +59,11 @@
   color: white;
   border-radius: 12px;
   width: 20%;
+  font-weight: bold;
 }
 .editButton {
-  border: 1px solid #40004c;
-  background: #4f005f;
+  border: 1px solid #000000;
+  background: #000000;
 }
 .cancelButton {
   border: 1px solid #f01010;
@@ -55,12 +71,14 @@
 }
 
 .editButton:hover {
-  background: #5f006f;
+  background-color: #242424;
 }
 
 .cancelButton:hover {
   background: #ff1020;
 }
+
+
 @media (min-width: 768px) {
   .modal {
     left: calc(50% - 20rem);

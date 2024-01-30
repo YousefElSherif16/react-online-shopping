@@ -4,11 +4,7 @@ const BestSellerItem = ({ item, dashboard, onEdit, onDelete }) => {
   return (
     <div className="best-seller-content-slider-item me-0">
       <div className="card">
-        <img
-          src={require("../../assets/img/best-seller-first-image.png")}
-          className="card-img-top"
-          alt="..."
-        />
+        <img src={item.image} className="card-img-top" alt="..." />
         <div className="card-img-overlay">
           <div className="card-img-overlay-top-left">
             <p>{item.badge}</p>
