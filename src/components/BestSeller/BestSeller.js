@@ -113,7 +113,7 @@ const BestSeller = ({ admin }) => {
           </div>  
         )}
       </Row>
-      <div className="d-flex flex-wrap justify-content-between">
+      <div className="d-flex flex-wrap ">
         {products.map((item) => (
           <BestSellerItem
             key={item.id}

@@ -2,7 +2,7 @@ import "./BestSellerItem.css";
 
 const BestSellerItem = ({ item, dashboard, onEdit, onDelete }) => {
   return (
-    <div className="best-seller-content-slider-item py-3">
+    <div className="best-seller-content-slider-item py-3 col-3 px-2">
       <div className="card">
         <img src={item.image} alt="..." />
         <div className="card-img-overlay">
