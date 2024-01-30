@@ -7,7 +7,7 @@ import EditProduct from "./EditProduct";
 
 import "./BestSeller.css";
 
-const BestSeller = ({admin}) => {
+const BestSeller = ({ admin }) => {
   const [products, setProducts] = useState([]);
   const [product, setProduct] = useState(null);
   const [dashboard, setDashboard] = useState(admin);
@@ -100,38 +100,31 @@ const BestSeller = ({admin}) => {
 
   if (!products.length) return null;
   return (
-    <div>
-      <section id="best-seller">
-        <div className="container">
-          <div className="best-seller ">
-            <Row className="py-5">
-              <div className="col-8 best-seller-content-text justify-content-start">
-                <p>Best Seller</p>
-              </div>
-              {dashboard && (
-                <div className="col-4 d-flex justify-content-end ">
-                  <Button className="btn btn-primary" onClick={handleCreate}>
-                    Add Product
-                  </Button>
-                </div>
-              )}
-            </Row>
-            <div className="best-seller-content">
-              <div className="best-seller-content-slider">
-                {products.map((item) => (
-                  <BestSellerItem
-                    key={item.id}
-                    item={item}
-                    dashboard={dashboard}
-                    onDelete={() => handleDelete(item.id)}
-                    onEdit={() => handleEdit(item.id)}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+    <Container>
+      <Row className="py-4 justify-content-center justify-content-md-start">
+        <div className="col-md-7 col-6 best-seller-content-text d-flex justify-content-center justify-content-sm-start">
+          <p>Best Seller</p>
         </div>
-      </section>
+        {dashboard && (
+          <div className="col-md-5 col-5 d-flex justify-content-end ">
+            <Button className="btn btn-primary" onClick={handleCreate}>
+              Add Product
+            </Button>
+          </div>  
+        )}
+      </Row>
+      <div className="d-flex flex-wrap justify-content-between">
+        {products.map((item) => (
+          <BestSellerItem
+            key={item.id}
+            item={item}
+            dashboard={dashboard}
+            onDelete={() => handleDelete(item.id)}
+            onEdit={() => handleEdit(item.id)}
+          />
+        ))}
+      </div>
+
       {(editable || creatable) && (
         <EditProduct
           product={product}
@@ -140,7 +133,7 @@ const BestSeller = ({admin}) => {
           onCancel={handleCancel}
         />
       )}
-    </div>
+    </Container>
   );
 };
 

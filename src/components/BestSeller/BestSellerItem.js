@@ -2,16 +2,16 @@ import "./BestSellerItem.css";
 
 const BestSellerItem = ({ item, dashboard, onEdit, onDelete }) => {
   return (
-    <div className="best-seller-content-slider-item me-0">
+    <div className="best-seller-content-slider-item py-3">
       <div className="card">
-        <img src={item.image} className="card-img-top" alt="..." />
+        <img src={item.image} alt="..." />
         <div className="card-img-overlay">
           <div className="card-img-overlay-top-left">
             <p>{item.badge}</p>
           </div>
         </div>
       </div>
-      <div className="best-seller-content-slider-item-desc">
+      <div className="d-flex flex-column">
         <div className="stars">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ const BestSellerItem = ({ item, dashboard, onEdit, onDelete }) => {
         <p className="product-name">{item.name}</p>
         <p className="product-price">${item.price}</p>
         {dashboard && (
-          <button className="btn btn-primary" onClick={onEdit}>
+          <button className="btn btn-primary my-1" onClick={onEdit}>
             Edit
           </button>
         )}

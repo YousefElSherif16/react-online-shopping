@@ -4,6 +4,8 @@ import ProductCarousel from "../ProductCarousel/ProductCarousel";
 import ShopCollection from "../ShopCollection/ShopCollection";
 import BestSeller from "../BestSeller/BestSeller";
 import Banner from "../Banner/Banner";
+import Values from "../Values/Values";
+import NewsFeed from "../NewsFeed/NewsFeed";
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
       <ShopCollection />
       <BestSeller admin={false} />
       <Banner />
+      <Values />
+      <NewsFeed />
     </>
   );
 };
