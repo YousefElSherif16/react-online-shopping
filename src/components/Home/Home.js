@@ -6,6 +6,7 @@ import BestSeller from "../BestSeller/BestSeller";
 import Banner from "../Banner/Banner";
 import Values from "../Values/Values";
 import NewsFeed from "../NewsFeed/NewsFeed";
+import NewsLetter from "../NewsLetter/NewsLetter";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Banner />
       <Values />
       <NewsFeed />
+      <NewsLetter />
     </>
   );
 };

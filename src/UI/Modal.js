@@ -4,7 +4,6 @@ import Button from "./Button";
 import classes from "./Modal.module.css";
 import Card from "./Card";
 import FileBase from "react-file-base64";
-import toast from "react-hot-toast";
 
 const Backdrop = (props) => {
   return <div className={classes.backdrop} onClick={props.onConfirm} />;
@@ -36,7 +35,6 @@ const ModalOverlay = (props) => {
       badge: badge,
       image: file,
     };
-    toast.success("Product updated successfully!");
     props.onConfirm(updatedProduct);
   };
 

@@ -1,5 +1,7 @@
 import { Container, Row } from "reactstrap";
+import { useState } from "react";
 import "./BrandLogos.css";
+import ImageCarousel from "../../UI/ImageCarousel";
 
 const logos = [
   "brand-logo-1.png",
@@ -10,26 +12,40 @@ const logos = [
   "brand-logo-1.png",
 ];
 const BrandLogos = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    const newIndex = (currentIndex + 1) % logos.length;
+    setCurrentIndex(newIndex);
+  };
+
+  const handlePrevious = () => {
+    const newIndex = (currentIndex - 1 + logos.length) % logos.length;
+    setCurrentIndex(newIndex);
+  };
   return (
     <Container>
       <Row className="py-md-5 py-0 overflow-hidden">
-        <div className="d-flex justify-content-between py-md-0 py-4 gap-1">
-          {logos.map((logo) => (
+        <div className=" d-flex justify-content-between py-md-0 py-4 gap-1">
+          <ImageCarousel images={logos} currentIndex={currentIndex} />
+
+          {/* {logos.map((logo) => (
             <div
               className="brand-logos-content-slider-item"
               key={logo + Math.random()}
             >
               <img src={require(`../../assets/img/${logo}`)} alt="" />
             </div>
-          ))}
+          ))} */}
         </div>
-        <div className="d-xl-none d-flex justify-content-center">
+        <div className="d-flex justify-content-center">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="25"
             height="24"
             viewBox="0 0 25 24"
             fill="none"
+            onClick={handlePrevious}
           >
             <path
               fillRule="evenodd"
@@ -44,6 +60,7 @@ const BrandLogos = () => {
             height="24"
             viewBox="0 0 25 24"
             fill="none"
+            onClick={handleNext}
           >
             <path
               fillRule="evenodd"

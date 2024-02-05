@@ -29,7 +29,8 @@
   color: #121212;
 }
 
-.best-seller-content-slider-item {
+.best-seller-content-slider-item button{
+  width: 50%;
 }
 .best-seller-content-slider-item img {
   width: 100%;

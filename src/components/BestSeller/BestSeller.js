@@ -4,8 +4,10 @@ import { Container, Row } from "reactstrap";
 import Button from "../../UI/Button";
 import BestSellerItem from "./BestSellerItem";
 import EditProduct from "./EditProduct";
+import useApi from "../../hooks/use-api";
 
 import "./BestSeller.css";
+import toast from "react-hot-toast";
 
 const BestSeller = ({ admin }) => {
   const [products, setProducts] = useState([]);
@@ -13,6 +15,13 @@ const BestSeller = ({ admin }) => {
   const [dashboard, setDashboard] = useState(admin);
   const [editable, setEditable] = useState(false);
   const [creatable, setCreatable] = useState(false);
+
+  // const { data, loading, error, createItem, updateItem, deleteItem, getItems } =
+  //   useApi("https://65b5ce6eda3a3c16abfff78f.mockapi.io/products");
+  // //remember to handle dependencies
+  // useEffect(() => {
+  //   setProducts(data);
+  // }, [data]);
 
   useEffect(() => {
     axios
@@ -26,14 +35,17 @@ const BestSeller = ({ admin }) => {
   }, [product, editable, creatable]);
 
   const handleDelete = (id) => {
+    // deleteItem(id);
     axios
       .delete(`https://65b5ce6eda3a3c16abfff78f.mockapi.io/products/${id}`)
       .then((res) => {
         const newProducts = products.filter((item) => item.id !== id);
         setProducts(newProducts);
+        toast.success("Product deleted successfully!");
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Something went wrong!");
       });
   };
 
@@ -58,9 +70,11 @@ const BestSeller = ({ admin }) => {
       .then((res) => {
         setProduct(null);
         setEditable(false);
+        toast.success("Product updated successfully!");
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Something went wrong!");
       });
   };
 
@@ -74,9 +88,13 @@ const BestSeller = ({ admin }) => {
       .then((res) => {
         setProduct(null);
         setCreatable(false);
+        toast.success("Product created successfully!");
       })
       .catch((err) => {
         console.log(err);
+        if (err.response.request.status === 413)
+          toast.error("HELP! Image Too Large");
+        else toast.error("Something went wrong!");
       });
   };
 
@@ -98,6 +116,7 @@ const BestSeller = ({ admin }) => {
     setProduct(null);
   };
 
+  // if (loading) return <p>Loading...</p>;
   if (!products.length) return null;
   return (
     <Container>
@@ -110,7 +129,7 @@ const BestSeller = ({ admin }) => {
             <Button className="btn btn-primary" onClick={handleCreate}>
               Add Product
             </Button>
-          </div>  
+          </div>
         )}
       </Row>
       <div className="d-flex flex-wrap ">

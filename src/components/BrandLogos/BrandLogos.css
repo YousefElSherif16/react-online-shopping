@@ -3,6 +3,7 @@
   height: 64px;
   object-fit: contain;
 }
+
 @media (max-width: 768px) {
   .brand-logos-content-slider-item img {
     width: 120px;

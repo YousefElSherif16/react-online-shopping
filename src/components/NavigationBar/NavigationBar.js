@@ -82,8 +82,13 @@ const NavigationBar = () => {
               </a>
             </li>
             <li>
-              <a href="#" onClick={handleDashboardNavigate}>
+              <a href="#">
                 Contact Us
+              </a>
+            </li>
+            <li>
+              <a href="#" onClick={handleDashboardNavigate}>
+                Dashboard
               </a>
             </li>
           </ul>

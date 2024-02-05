@@ -77,14 +77,14 @@ const BestSellerItem = ({ item, dashboard, onEdit, onDelete }) => {
         <p className="product-name">{item.name}</p>
         <p className="product-price">${item.price}</p>
         {dashboard && (
-          <button className="btn btn-primary my-1" onClick={onEdit}>
-            Edit
-          </button>
-        )}
-        {dashboard && (
-          <button className="btn btn-danger" onClick={onDelete}>
-            Delete
-          </button>
+          <div className="d-flex">
+            <button className="btn btn-primary m-1" onClick={onEdit}>
+              Edit
+            </button>
+            <button className="btn btn-danger m-1" onClick={onDelete}>
+              Delete
+            </button>
+          </div>
         )}
       </div>
     </div>
