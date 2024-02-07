@@ -39,13 +39,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 45px;
   margin: 0 auto;
   width: 100%;
 }
-
+.newsfeed-card-item {
+  width: 22%;
+}
 .newsfeed-card-item img {
-  width: 225px;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .newsfeed-title .title {
@@ -62,7 +63,7 @@
     flex-wrap: wrap;
     gap: 16px;
   }
-  .newsfeed-card-item img {
-    width: 350px;
+  .newsfeed-card-item {
+    width: 100%;
   }
 }

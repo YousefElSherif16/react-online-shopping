@@ -29,7 +29,7 @@
   color: #121212;
 }
 
-.best-seller-content-slider-item button{
+.best-seller-content-slider-item button {
   width: 50%;
 }
 .best-seller-content-slider-item img {
@@ -48,9 +48,7 @@
     font-size: 14px;
     line-height: 22px;
   }
-
   .best-seller-content-slider-item img {
-    width: 152px;
     height: 203px;
   }
 }

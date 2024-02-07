@@ -12,7 +12,7 @@ const NewsFeed = () => {
           </p>
           <p className="mention">@3legant_official</p>
         </div>
-        <div className="newsfeed-cards d-flex flex-wrap justify-content-center justify-content-md-between py-4">
+        <div className="newsfeed-cards d-flex flex-wrap justify-content-center justify-content-md-between py-4 w-100">
           <div className="newsfeed-card-item mx-2">
             <img
               src={require("../../assets/img/newsfeed-first-image.png")}

@@ -3,41 +3,48 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <Container fluid className="footer py-5 px-5">
-      <Row className="footer-content mx-4">
-        <div className="slogan col-6">
-          <div className="logo">3legant.</div>
-          <div className="rectangle"></div>
-          <div className="title">Headphone Store</div>
+    <Container fluid className="footer pt-5 pb-2 px-5">
+      <Row className="d-flex flex-column flex-md-row justify-content-between w-100 px-4">
+        <div className="col-md-6 col-12 d-flex flex-column flex-md-row justify-content-start align-items-center">
+          <div className="logo m-2">3legant.</div>
+          <div className="rectangle m-2"></div>
+          <div className="title m-2">Headphone Store</div>
         </div>
-        <div className="nav col-6">
-          <ul>
-            <li>
+        <div className="col-md-6 col-12">
+          <ul className="d-flex flex-column flex-md-row justify-content-end align-items-center">
+            <li className="m-2">
               <a href="#">Home</a>
             </li>
-            <li>
+            <li className="m-2">
               <a href="#">Shop</a>
             </li>
-            <li>
+            <li className="m-2">
               <a href="#">Product</a>
             </li>
-            <li>
+            <li className="m-2">
               <a href="#">Blog</a>
             </li>
-            <li>
+            <li className="m-2">
               <a href="#">Contact Us</a>
             </li>
           </ul>
         </div>
       </Row>
-      <Row className="bottom-bar mx-4">
-        <div className="copyright justify-content-start col-6 ">
-          <p className="copy">Copyright © 2023 3legant. All rights reserved</p>
-          <p className="privacy">Privacy Policy</p>
-          <p className="terms">Terms of Use</p>
+      <Row className="bottom-bar w-100 m-4 d-flex flex-column flex-md-row align-items-center px-4">
+        <div className="d-flex flex-wrap col-md-8 mt-3 order-2 order-md-1 col-12 align-items-center justify-content-center justify-content-md-start">
+          <p className="copy mx-2 mt-md-0 mt-3 d-flex justify-content-center justify-content-md-start order-md-1 order-3 col-12 col-md-3">
+            Copyright © 2023 3legant. All rights reserved
+          </p>
+          <p className="privacy mx-2 order-md-2 order-1  col-md-1 justify-content-center">
+            Privacy Policy
+          </p>
+          <p className="terms mx-2 order-md-3 order-2  col-md-1 justify-content-center d-flex">
+            Terms of Use
+          </p>
         </div>
-        <div className="socials col-6 ">
+        <div className="col-md-4 col-12 mt-3 d-flex justify-content-md-end justify-content-center order-1 order-md-2">
           <svg
+            className="mx-2"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -57,6 +64,7 @@ const Footer = () => {
             <circle cx="12" cy="12" r="5" stroke="#FEFEFE" strokeWidth="1.5" />
           </svg>
           <svg
+            className="mx-2"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
@@ -72,6 +80,7 @@ const Footer = () => {
             />
           </svg>
           <svg
+            className="mx-2"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
