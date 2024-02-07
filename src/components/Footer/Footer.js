@@ -35,10 +35,10 @@ const Footer = () => {
           <p className="copy mx-2 mt-md-0 mt-3 d-flex justify-content-center justify-content-md-start order-md-1 order-3 col-12 col-md-3">
             Copyright © 2023 3legant. All rights reserved
           </p>
-          <p className="privacy mx-2 order-md-2 order-1  col-md-1 justify-content-center">
+          <p className="privacy mx-2 order-md-2 order-1 col-md-1 justify-content-center">
             Privacy Policy
           </p>
-          <p className="terms mx-2 order-md-3 order-2  col-md-1 justify-content-center d-flex">
+          <p className="terms mx-2 order-md-3 order-2 col-md-1 justify-content-center">
             Terms of Use
           </p>
         </div>
