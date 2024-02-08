@@ -47,7 +47,12 @@ const ModalOverlay = (props) => {
   };
 
   return (
-    <Card className={classes.modal}>
+    <Card
+      className={classes.modal}
+      style={{
+        overflowY: "scroll",
+      }}
+    >
       <header className={classes.header}>
         <h2>{props.title}</h2>
       </header>
@@ -74,7 +79,7 @@ const ModalOverlay = (props) => {
             <img
               src={file}
               alt="product"
-              style={{ width: "25%", marginRight: "1rem" }}
+              style={{ width: "25%", height: "25%", marginRight: "1rem" }}
             />
             <Button className={"btn btn-secondary"} onClick={() => setFile("")}>
               Remove Image

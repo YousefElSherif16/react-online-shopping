@@ -126,12 +126,23 @@ const BestSeller = ({ admin }) => {
         </div>
         {dashboard && (
           <div className="col-md-5 col-5 d-flex justify-content-end ">
-            <Button className="btn btn-primary" onClick={handleCreate}>
+            {/* <Button className="btn btn-primary" onClick={handleCreate} >
               Add Product
-            </Button>
+            </Button> */}
+            <button
+              className="btn btn-primary"
+              onClick={handleCreate}
+              style={{
+                backgroundColor: "#ffab00",
+                border: "1px solid #ffab00",
+              }}
+            >
+              Add Product
+            </button>
           </div>
         )}
       </Row>
+
       <div className="d-flex flex-wrap overflow-hidden ">
         {products.map((item) => (
           <BestSellerItem

@@ -78,10 +78,24 @@ const BestSellerItem = ({ item, dashboard, onEdit, onDelete }) => {
         <p className="product-price">${item.price}</p>
         {dashboard && (
           <div className="d-flex">
-            <button className="btn btn-primary m-1" onClick={onEdit}>
+            <button
+              className="btn btn-primary m-1"
+              onClick={onEdit}
+              style={{
+                backgroundColor: "#ffab00",
+                border: "1px solid #ffab00",
+              }}
+            >
               Edit
             </button>
-            <button className="btn btn-danger m-1" onClick={onDelete}>
+            <button
+              className="btn btn-danger m-1"
+              onClick={onDelete}
+              style={{
+                backgroundColor: "#141718 ",
+                border: "1px solid #141718",
+              }}
+            >
               Delete
             </button>
           </div>
