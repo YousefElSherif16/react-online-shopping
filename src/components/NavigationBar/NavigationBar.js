@@ -37,12 +37,12 @@ const NavigationBar = () => {
         <div className="col-sm-6 col-0 d-md-flex d-none justify-content-center navigation-bar-menu">
           <ul className="d-flex justify-content-center align-items-center gap-4">
             <li>
-              <a href="#" onClick={handleHomeNavigate}>
+              <button onClick={handleHomeNavigate}>
                 Home
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#" className="gap-0.5">
+              <button className="gap-0.5">
                 Shop
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -59,10 +59,10 @@ const NavigationBar = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#" className="gap-0.5">
+              <button className="gap-0.5">
                 Product
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -79,17 +79,13 @@ const NavigationBar = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#">
-                Contact Us
-              </a>
+              <button>Contact Us</button>
             </li>
             <li>
-              <a href="#" onClick={handleDashboardNavigate}>
-                Dashboard
-              </a>
+              <button onClick={handleDashboardNavigate}>Dashboard</button>
             </li>
           </ul>
         </div>

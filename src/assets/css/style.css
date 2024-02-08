@@ -27,3 +27,7 @@ a {
   list-style: none;
   text-decoration: none;
 }
+
+a {
+  cursor: pointer;
+}

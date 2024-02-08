@@ -1,7 +1,14 @@
 import { Container, Row } from "reactstrap";
+import { useNavigate } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleDashboardNavigate = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <Container fluid className="footer pt-5 pb-2 px-5">
       <Row className="d-flex flex-column flex-md-row justify-content-between w-100 px-4">
@@ -13,19 +20,22 @@ const Footer = () => {
         <div className="col-md-6 col-12">
           <ul className="d-flex flex-column flex-md-row justify-content-end align-items-center">
             <li className="m-2">
-              <a href="#">Home</a>
+              <button>Home</button>
             </li>
             <li className="m-2">
-              <a href="#">Shop</a>
+              <button>Shop</button>
             </li>
             <li className="m-2">
-              <a href="#">Product</a>
+              <button>Product</button>
             </li>
             <li className="m-2">
-              <a href="#">Blog</a>
+              <button>Blog</button>
             </li>
             <li className="m-2">
-              <a href="#">Contact Us</a>
+              <button>Contact Us</button>
+            </li>
+            <li className="m-2">
+              <button onClick={handleDashboardNavigate}>Dashboard</button>
             </li>
           </ul>
         </div>

@@ -20,8 +20,11 @@
   line-height: 22px;
 }
 
-.footer a {
+.footer button {
   color: #fefefe;
+  background-color: transparent;
+  outline: none;
+  border: none;
   font-family: Inter;
   font-size: 14px;
   font-weight: 400;
